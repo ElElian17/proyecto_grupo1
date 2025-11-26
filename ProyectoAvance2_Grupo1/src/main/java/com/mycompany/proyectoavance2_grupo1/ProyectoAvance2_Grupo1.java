@@ -14,6 +14,9 @@ public class ProyectoAvance2_Grupo1 {
 
     public static void main(String[] args) {
         MenuPrincipal();
+        
+        System.out.println("Prueba para git");
+        
     }
     
     public static void MenuPrincipal(){
