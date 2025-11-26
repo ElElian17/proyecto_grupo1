@@ -13,10 +13,7 @@ import javax.swing.JOptionPane;
 public class ProyectoAvance2_Grupo1 {
 
     public static void main(String[] args) {
-        MenuPrincipal();
-        
-        System.out.println("Prueba para git");
-        
+        MenuPrincipal();       
     }
     
     public static void MenuPrincipal(){
