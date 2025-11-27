@@ -17,32 +17,24 @@ public class ProyectoAvance2_Grupo1 {
     }
     
     public static void MenuPrincipal(){
-        String menu = "Hola usuario.\nTe damos la bienvenida a Tropic Glamour.\n¿Que acción deseas realizar?\n\n";
-        menu += "(1) Consultar habitaciones\n";
-        menu += "(2) Reservar habtiación\n";
-        menu += "(3) Gestionar usuario\n";
-        menu += "(4) Salir\n\n";
-        menu += "***Digita el número de una de las opciones";
         
-        int SelecModulo = Integer.parseInt(JOptionPane.showInputDialog(null, menu, JOptionPane.QUESTION_MESSAGE));
+        int opcion = 0;
+        do{
+            String[] opciones = {"Consultar habitaciones", "Reservar habitación", "Gestionar usuario", "Salir"};
+            opcion = JOptionPane.showOptionDialog(null, "Hola usuario.\nTe damos la bienvenida a Tropic Glamour.\n¿Que acción deseas realizar?", "Menú de gestión", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, opciones, opciones[0]);
         
-        while(SelecModulo != 4){
-            switch(SelecModulo){
-                case 1:
+            switch(opcion){
+                case 0:
                     JOptionPane.showMessageDialog(null, "Has accedido al modulo de Consultar habitaciones");
                     break;
-                case 2:
+                case 1:
                     JOptionPane.showMessageDialog(null, "Has accedido al modulo de Reservar habitacion");
                     break;
-                case 3:
+                case 2:
                     JOptionPane.showMessageDialog(null, "Has accedido al modulo de Gestionar usuario");
                     break;
-                default:
-                    JOptionPane.showMessageDialog(null, "Has introducido una opción incorrecta!\nPor favor, digita una de las opciones válidas");
-                    break;
                 }
-            SelecModulo = Integer.parseInt(JOptionPane.showInputDialog(null, menu, JOptionPane.QUESTION_MESSAGE));
-        }
+        }while(opcion != 3);
         JOptionPane.showMessageDialog(null, "Gracias por tu visita usuario, esperamos tu regreso!");
-    }
+    }          
 }
